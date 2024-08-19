@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 0px solid green; 
+}
+</style>
+
+<div class="center">
+<button onclick="newTabinBackground();picture()"> <p>🎬✅Click here to Reveal Movie Info/Title</p> </button>
+</div>
+
+</head>
+
+
+<body>
+
+<div id="A">
+---
+<script>
+  function newTabinBackground() {
+    const a = document.createElement('a');
+    a.href = 'https://example.com/';
+    a.target = '_blank';
+    const e = new MouseEvent('click', {
+      ctrlKey: true, // for Windows or Linux
+      metaKey: true, // for MacOS
+    });
+    a.dispatchEvent(e);
+  }
+</script>
+</div>
+
+
+<div id="b">
+---<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+    <style>
+        /* Set display to none for image*/
+        #image {
+            display: none;
+        }
+    </style>
+
+
+
+    <div>
+        
+        
+        <!-- Add id to image -->
+        <img id="image" 
+             src=
+"https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10372479_p_v8_ab.jpg"
+             alt="GFG image" width="300" />
+    </div>
+
+
+    <script>
+        function picture() {
+            /* Access image by id and change 
+            the display property to block*/
+            document.getElementById('image')
+                .style.display = "block";
+            document.getElementById('btnID')
+                .style.display = "none";
+        }
+    </script>
+       
+</div>
+</body>
+
+</html>
+
