@@ -1,84 +1,54 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
 <style>
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  border: 0px solid green; 
+
+
+.bar1 {
+  position: absolute;
+  top: 44px;
+  left: 8px;
+  width: 560px;
+  height: 315px;
+  background-color: none;
 }
+
+.bar3 {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 560px;
+  height: 40px;
+  background-color: black;
+}
+
 </style>
-
-<div class="center">
-<button onclick="newTabinBackground();picture()"> <p>🎬✅Click here to Reveal Movie Info/Title</p> </button>
-</div>
-
 </head>
-
-
 <body>
 
-<div id="A">
----
-<script>
-  function newTabinBackground() {
-    const a = document.createElement('a');
-    a.href = 'https://google.com/';
-    a.target = '_blank';
-    const e = new MouseEvent('click', {
-      ctrlKey: true, // for Windows or Linux
-      metaKey: true, // for MacOS
-    });
-    a.dispatchEvent(e);
-  }
+<div class="video-frame">
+<div class="container">
+  
+  <iframe preload="auto" id="player2" width="560" height="315" src="https://vidsrc.pro/embed/movie/tt1086772" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
+<div class="bar1" id="bar1">
+</div> 
+<div class="bar3"></div>
+</div>
+
+<script type="text/javascript">
+        document.getElementById("bar1").onclick = function() {
+            document.getElementById("bar1").style.display = "none";window.open(
+                "https://example.com", "_blank")
+        }
+        
 </script>
-</div>
-
-
-<div id="b">
----<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-    <style>
-        /* Set display to none for image*/
-        #image {
-            display: none;
-        }
-    </style>
 
 
 
-    <div>
-        
-        
-        <!-- Add id to image -->
-        <img id="image" 
-             src=
-"https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10372479_p_v8_ab.jpg"
-             alt="GFG image" width="300" />
-    </div>
-
-
-    <script>
-        function picture() {
-            /* Access image by id and change 
-            the display property to block*/
-            document.getElementById('image')
-                .style.display = "block";
-            document.getElementById('btnID')
-                .style.display = "none";
-        }
-    </script>
-       
-</div>
 </body>
-
 </html>
-
