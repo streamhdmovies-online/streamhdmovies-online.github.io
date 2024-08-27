@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+<style>
+
+button{
+  border: none;
+  background-color: green;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:focus{
+  outline: 0;
+}
+#stop{
+  background-color: #ff0002;
+}
+
+.bar1 {
+  position: absolute;
+  top: 44px;
+  left: 8px;
+  width: 560px;
+  height: 275px;
+  background-color: none;
+}
+
+.bar2 {
+  position: absolute;
+  top: 319px;
+  left: 8px;
+  width: 6%;
+  height: 40px;
+  background-color: none;
+}
+</style>
+</head>
+<body>
+
+
+<a onclick="window.open('https://example.com');"><button id="play">PLAY</button></a>
+<a onclick="window.open('https://example.com');"><button id="stop">STOP</button></a>
+
+<div class="video-frame">
+<div class="container">
+  <iframe id="player2" width="560" height="315" src="https://vidsrc.pro/embed/movie/tt12004038" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="bar1"></div> 
+<div class="bar2"></div>
+</div>
+
+<script>
+const Player = document.getElementById('player2');
+const PlayBtn = document.getElementById('play');
+const stopBtn = document.getElementById('stop');
+let times = 0, playY;
+const playVideo = PlayBtn.addEventListener( 'click' , () => {
+    if(times == 0){
+      playY = Player.src += '?autoplay=1';
+      times = 1;
+    }
+});
+
+stopBtn.addEventListener( 'click' , () => {
+    playY = playY.slice(0, -11);
+    Player.src = playY
+    times = 0;
+});
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+<style>
+
+button{
+  border: none;
+  background-color: green;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:focus{
+  outline: 0;
+}
+#stop{
+  background-color: #ff0002;
+}
+
+.bar1 {
+  position: absolute;
+  top: 44px;
+  left: 8px;
+  width: 560px;
+  height: 275px;
+  background-color: none;
+}
+
+.bar2 {
+  position: absolute;
+  top: 319px;
+  left: 8px;
+  width: 6%;
+  height: 40px;
+  background-color: none;
+}
+</style>
+</head>
+<body>
+
+
+<a onclick="window.open('https://example.com');"><button id="play">PLAY</button></a>
+<a onclick="window.open('https://example.com');"><button id="stop">STOP</button></a>
+
+<div class="video-frame">
+<div class="container">
+  <iframe id="player2" width="560" height="315" src="https://vidsrc.pro/embed/movie/tt0120737" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="bar1"></div> 
+<div class="bar2"></div>
+</div>
+
+<script>
+const Player = document.getElementById('player2');
+const PlayBtn = document.getElementById('play');
+const stopBtn = document.getElementById('stop');
+let times = 0, playY;
+const playVideo = PlayBtn.addEventListener( 'click' , () => {
+    if(times == 0){
+      playY = Player.src += '?autoplay=1';
+      times = 1;
+    }
+});
+
+stopBtn.addEventListener( 'click' , () => {
+    playY = playY.slice(0, -11);
+    Player.src = playY
+    times = 0;
+});
+</script>
+
+</body>
+</html>
